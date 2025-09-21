@@ -10,7 +10,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     Future.delayed(
-      Duration(milliseconds: 3000),
+      Duration(milliseconds: 2000),
       () => Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => HomePage()),
@@ -28,7 +28,11 @@ class _SplashScreenState extends State<SplashScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image.asset('assets/images/luffy.jpg'),
+            Image.asset(
+              'assets/images/luffy.jpg',
+              width: 100,
+              fit: BoxFit.fitHeight,
+            ),
             SizedBox(height: 50),
             CircularProgressIndicator(),
           ],
