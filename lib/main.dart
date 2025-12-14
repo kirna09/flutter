@@ -1,6 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:mi_app/src/pages/app.dart';
+import 'package:mi_app/src/table_page.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]);
   runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(title: 'Practica 18', home: TablePage());
+  }
 }
